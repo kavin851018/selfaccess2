@@ -1,0 +1,7 @@
+<?php
+require('db_connect.php');
+$sql = mysql_query("SELECT `id` FROM `student` WHERE `id` LIKE 'b02%' OR `id` LIKE 'b03%' OR `id` LIKE 'b04%' OR `id` LIKE 'b05%'");
+while($result = mysql_fetch_array($sql)){
+	echo $result['id'].'@student.nsysu.edu.tw, ';
+}
+?>
